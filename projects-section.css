@@ -1,0 +1,174 @@
+.projects-section {
+  position: relative;
+}
+.projects-section::before,
+.projects-section::after {
+  content: "";
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 2;
+  filter: blur(8px);
+  opacity: 0.85;
+  animation: glow-corner-projects 2.5s linear infinite alternate;
+}
+.projects-section::before {
+  top: -16px;
+  left: -16px;
+  background: radial-gradient(circle, #21c5ff 0%, #00d423 80%, transparent 100%);
+  animation-delay: 0s;
+}
+.projects-section::after {
+  bottom: -16px;
+  right: -16px;
+  background: radial-gradient(circle, #00d423 0%, #21c5ff 80%, transparent 100%);
+  animation-delay: 1.2s;
+}
+@keyframes glow-corner-projects {
+  0% {
+    opacity: 0.7;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1.18);
+  }
+}
+/* Border for projects section */
+.projects-section {
+  border: 2.5px solid rgba(33, 197, 255, 0.25);
+  border-radius: 18px;
+  box-shadow: 0 2px 24px rgba(33, 197, 255, 0.08);
+  padding: 18px 0;
+}
+/* Center title */
+.projects-title {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+/* Carousel wrapper */
+.projects-carousel-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 8px;
+}
+
+/* Carousel flex */
+.projects-carousel {
+  display: flex;
+  gap: 32px;
+  min-width: 100%;
+}
+
+.project-item {
+  min-width: 280px;
+  max-width: 320px;
+  flex: 0 0 auto;
+}
+
+/* Tombol lihat hasil */
+.project-btn {
+  margin-top: 14px;
+  display: inline-block;
+  padding: 8px 22px;
+  background: linear-gradient(90deg, #00bcd4, #21c5ff);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(0, 188, 212, 0.1);
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+}
+.project-btn:hover {
+  background: linear-gradient(90deg, #21c5ff, #00bcd4);
+  color: #fff;
+  transform: translateY(-2px) scale(1.04);
+  box-shadow: 0 6px 18px rgba(0, 188, 212, 0.18);
+}
+
+@media (max-width: 900px) {
+  .projects-carousel {
+    gap: 18px;
+  }
+  .project-item {
+    min-width: 220px;
+    max-width: 260px;
+  }
+}
+
+@media (max-width: 600px) {
+  .projects-carousel {
+    gap: 12px;
+  }
+  .project-item {
+    min-width: 160px;
+    max-width: 200px;
+  }
+}
+/* Set min-height for desktop */
+.projects-section {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+}
+/* Projects Section Styles */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 32px;
+  width: 100%;
+  margin-top: 32px;
+}
+.project-item {
+  background: rgba(40, 40, 40, 0.35);
+  border-radius: 12px;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.1);
+  padding: 24px 18px 18px 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.project-item img {
+  width: 100%;
+  max-width: 220px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  box-shadow: 0 1px 6px rgba(0, 188, 212, 0.1);
+}
+.project-item h3 {
+  margin: 0 0 8px 0;
+  color: #00bcd4;
+  font-size: 1.2rem;
+}
+.project-item p {
+  color: #f1f1f1;
+  font-size: 1rem;
+  text-align: center;
+}
+.project-item:hover {
+  box-shadow: 0 8px 32px rgba(0, 188, 212, 0.18);
+  transform: translateY(-6px) scale(1.03);
+}
+@media (max-width: 900px) {
+  .projects-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+  }
+}
+@media (max-width: 600px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .project-item img {
+    height: 80px;
+  }
+}

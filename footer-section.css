@@ -1,0 +1,171 @@
+/* === Modern Footer Section === */
+.footer-section {
+  background: linear-gradient(120deg, #101c24 60%, #21c5ff22 100%);
+  border-top-left-radius: 22px;
+  border-top-right-radius: 22px;
+  box-shadow: 0 2px 32px 0 #21c5ff33, 0 0 0 4px #00d42322 inset;
+  padding: 18px 32px 8px 32px;
+  color: #f1f1f1;
+  font-family: "Poppins", Arial, sans-serif;
+  margin-top: 32px;
+}
+.footer-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 18px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto 8px auto;
+  flex-wrap: wrap;
+}
+.footer-section .contact-form {
+  background: transparent;
+  border-radius: 12px;
+  box-shadow: none;
+  padding: 0;
+  width: 100%;
+  min-width: 220px;
+  max-width: 340px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+.footer-section .contact-form .input-group {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 8px;
+  padding: 8px 12px;
+  gap: 8px;
+  border: 1.5px solid #21c5ff33;
+  transition: border 0.2s, box-shadow 0.2s;
+}
+.footer-section .contact-form .input-group:focus-within {
+  border: 1.5px solid #21c5ff;
+  box-shadow: 0 0 8px #21c5ff55;
+}
+.footer-section .contact-form input,
+.footer-section .contact-form textarea {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #f1f1f1;
+  font-size: 1rem;
+  width: 100%;
+  padding: 6px 0;
+  resize: none;
+  font-family: inherit;
+  letter-spacing: 0.2px;
+}
+.footer-section .contact-form .btn {
+  background: linear-gradient(90deg, #21c5ff 0%, #00d423 100%);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 1.13rem;
+  padding: 12px 0;
+  margin-top: 8px;
+  box-shadow: 0 2px 12px #21c5ff22;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, transform 0.2s, box-shadow 0.2s;
+  letter-spacing: 0.5px;
+  width: 100%;
+}
+.footer-section .contact-form .btn:hover {
+  background: linear-gradient(90deg, #00d423 0%, #21c5ff 100%);
+  color: #fff;
+  transform: scale(1.04) translateY(-2px);
+  box-shadow: 0 8px 32px #21c5ff33;
+}
+.footer-socials {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  flex-wrap: wrap;
+  min-width: 180px;
+  justify-content: flex-end;
+}
+.footer-socials a {
+  font-size: 2.1rem;
+  background: rgba(33, 197, 255, 0.08);
+  border-radius: 50%;
+  padding: 10px;
+  transition: background 0.2s, color 0.2s, transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px #21c5ff11;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+.footer-socials a .bx-whatsapp {
+  color: #25d366;
+}
+.footer-socials a .bx-telegram {
+  color: #0088cc;
+}
+.footer-socials a .bx-github {
+  color: #fff;
+  background: #181717;
+  border-radius: 50%;
+  padding: 2px;
+}
+.footer-socials a .bx-instagram {
+  background: linear-gradient(135deg, #e1306c 0%, #fd1d1f 50%, #fcb045 100%);
+  color: #fff;
+  border-radius: 30%;
+}
+.footer-socials a .bx-linkedin {
+    background: #0077b5;
+  color: #ffff;
+  border-radius: 10%;
+}
+.footer-socials a .bx-tiktok {
+  color: #000;
+}
+.footer-socials a .bx-discord-alt {
+  color: #7289da;
+}
+.footer-socials a:hover {
+  background: linear-gradient(90deg, #21c5ff 60%, #00d423 100%);
+  color: #fff;
+  transform: scale(1.18) rotate(-8deg);
+  z-index: 2;
+  box-shadow: 0 8px 32px #21c5ff33;
+}
+.footer-section .container p {
+  text-align: center;
+  margin: 0 auto;
+  color: #e0f7ff;
+  font-size: 1.05rem;
+  letter-spacing: 0.2px;
+}
+@media (max-width: 900px) {
+  .footer-flex {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+  .footer-section .contact-form {
+    max-width: 100%;
+    margin-bottom: 12px;
+  }
+  .footer-socials {
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+}
+@media (max-width: 600px) {
+  .footer-section {
+    padding: 10px 8px 4px 8px;
+  }
+  .footer-flex {
+    gap: 8px;
+  }
+  .footer-section .container p {
+    font-size: 0.95rem;
+  }
+}
