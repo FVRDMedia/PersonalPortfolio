@@ -1,3 +1,6 @@
+html, body {
+  overflow-x: hidden;
+}
 body {
   max-width: 1920px;
   margin-left: auto;
@@ -94,3 +97,4 @@ span {
     background-position: 100% 0;
   }
 }
+
